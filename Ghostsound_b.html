@@ -167,6 +167,40 @@ window.addEventListener('DOMContentLoaded', function(){
 
 <!--==========-->
 
+<!--//////////-->
+<!--ループ非対応-->
+
+<p><font size=4>Ah</font></p>
+<audio src="human/Ah.mp3" type="audio/mpeg" id="audio_Ah"></audio>
+<button id="btn_play_Ah" class="btn_human">再生</button>
+<button id="btn_stop_Ah" class="btn_human">終了</button>
+<button id="btn_pause_Ah" class="btn_human">一時停止</button>
+
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+
+  const btn_play_Ah = document.getElementById("btn_play_Ah");
+  const btn_stop_Ah = document.getElementById("btn_stop_Ah");
+  const btn_pause_Ah = document.getElementById("btn_pause_Ah");
+  const audio_Ah = document.getElementById("audio_Ah");
+
+  btn_play_Ah.addEventListener("click", e => {
+    audio_Ah.play();
+  });
+
+  btn_stop_Ah.addEventListener("click", e => {
+    audio_Ah.pause();
+    audio_Ah.currentTime = 0;
+  });
+  btn_pause_Ah.addEventListener("click", e => {
+    audio_Ah.pause();
+  });
+});
+</script>
+
+<br><br>
+
+<!--==========-->
 
 
 <!--//////////-->
