@@ -1143,6 +1143,40 @@ window.addEventListener('DOMContentLoaded', function(){
 
 <!--==========-->
 
+<!--//////////-->
+<!--ループ対応-->
+
+<p><font size=4>黒電話着信</font></p>
+<audio loop src="tool/chaku_0.mp3" type="audio/mpeg" id="audio_chaku_0"></audio>
+<button id="btn_play_chaku_0" class="btn_tool">再生</button>
+<button id="btn_stop_chaku_0" class="btn_tool">終了</button>
+<button id="btn_pause_chaku_0" class="btn_tool">一時停止</button>
+
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+
+  const btn_play_chaku_0 = document.getElementById("btn_play_chaku_0");
+  const btn_stop_chaku_0 = document.getElementById("btn_stop_chaku_0");
+  const btn_pause_chaku_0 = document.getElementById("btn_pause_chaku_0");
+  const audio_chaku_0 = document.getElementById("audio_chaku_0");
+
+  btn_play_chaku_0.addEventListener("click", e => {
+    audio_chaku_0.play();
+  });
+
+  btn_stop_chaku_0.addEventListener("click", e => {
+    audio_chaku_0.pause();
+    audio_chaku_0.currentTime = 0;
+  });
+  btn_pause_chaku_0.addEventListener("click", e => {
+    audio_chaku_0.pause();
+  });
+});
+</script>
+
+<br><br>
+
+<!--==========-->
 
 <!--//////////-->
 <!--ループ非対応-->
