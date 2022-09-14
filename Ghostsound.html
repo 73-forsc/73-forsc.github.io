@@ -275,41 +275,6 @@ window.addEventListener('DOMContentLoaded', function(){
     
 <!--==========-->
 
-  
-<!--//////////-->
-<!--ループ非対応-->
-
-<p><font size=4>悲鳴0</font></p>
-<audio src="human/scream_0.mp3" type="audio/mpeg" id="audio_scream_0"></audio>
-<button id="btn_play_scream_0" class="btn_human">再生</button>
-<button id="btn_stop_scream_0" class="btn_human">終了</button>
-<button id="btn_pause_scream_0" class="btn_human">一時停止</button>
-
-<script>
-window.addEventListener('DOMContentLoaded', function(){
-
-  const btn_play_scream_0 = document.getElementById("btn_play_scream_0");
-  const btn_stop_scream_0 = document.getElementById("btn_stop_scream_0");
-  const btn_pause_scream_0 = document.getElementById("btn_pause_scream_0");
-  const audio_scream_0 = document.getElementById("audio_scream_0");
-
-  btn_play_scream_0.addEventListener("click", e => {
-    audio_scream_0.play();
-  });
-
-  btn_stop_scream_0.addEventListener("click", e => {
-    audio_scream_0.pause();
-    audio_scream_0.currentTime = 0;
-  });
-  btn_pause_scream_0.addEventListener("click", e => {
-    audio_scream_0.pause();
-  });
-});
-</script>
-
-<br><br>
-
-<!--==========-->
 
   <!--//////////-->
 <!--ループ非対応-->
