@@ -1,0 +1,64 @@
+
+<HTML>
+
+<HEAD>
+<TITLE>どこでもアウト</TITLE>
+</HEAD>
+
+<!--
+音声追加時は//////////から====までを1単位としてコピー
+audioタグファイル参照,id
+buttonタグid,再生停止,class
+btn_play_x
+btn_stop_x
+btn_pause_x
+audioElementX
+audioElement id
+styleタグ内.btn_x
+-->
+
+<BODY>
+
+<h1>どこでもアウト</h1>
+<p>ボタンを押すと誰かがアウトになります。</p>
+
+<!--//////////-->
+<!--ループ対応-->
+<audio src="out.mp3" type="audio/mpeg" id="Melody_A"></audio>
+<button id="btn_play" class="btn_on"><font color="#fff">アウト！</font></button><br>
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+
+  const btn_play = document.getElementById("btn_play");
+  const audioElementA = document.getElementById("Melody_A");
+
+  btn_play.addEventListener("click", e => {
+    audioElementA.play();
+  });
+});
+</script>
+
+<style>
+.btn_on{
+    width: 120px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background: #b7282e;
+    cursor: pointer;
+font-size: 20px;
+}
+</style>
+<br><br>
+<!--==========-->
+<h2>借用物</h2>
+<a href="https://www.youtube.com/watch?v=WLnAlXH6E-c">ガキ使アウト音源</a>
+  <br><br>
+<a href="https://73-forsc.github.io/">この装置の製作者のページ</a>
+ <br><br>
+<p>
+2022/9/30 公開<br><br>
+製作・著作<br>
+i_2e4b71</p>
+</body>
+</html>
