@@ -1,0 +1,154 @@
+
+<HTML>
+
+<HEAD>
+<TITLE>どこかで使える音たち</TITLE>
+</HEAD>
+
+<!--
+音声追加時は//////////から====までを1単位としてコピー
+audioタグファイル参照,id
+buttonタグid,再生停止,class
+btn_play_x
+btn_stop_x
+btn_pause_x
+audioElementX
+audioElement id
+styleタグ内.btn_x
+-->
+
+<BODY>
+
+<h1>どこかで使える音たち</h1>
+<p>それっぽいときにボタンを押そう！</p>
+
+<!--//////////-->
+<!--ループ非対応-->
+
+<p><font size=4>アウト！</font><br>
+アウトなときに押してください。</p>
+  <audio src="irori/out.mp3" type="audio/mpeg" id="audio_out"></audio>
+  <button id="btn_play_out" class="btn_on">アウト！</button>
+  
+  <script>
+  window.addEventListener('DOMContentLoaded', function(){
+  
+    const btn_play_out = document.getElementById("btn_play_out");
+    const audio_out = document.getElementById("audio_out");
+  
+    btn_play_out.addEventListener("click", e => {
+      audio_out.play();
+    });
+  });
+  </script>
+  
+  <br><br>
+  
+<!--==========-->
+
+<!--//////////-->
+<!--ループ非対応-->
+
+<p><font size=4>違う、そうじゃない</font><br>
+違うときに押してください。</p>
+<audio src="irori/wrong_sh.mp3" type="audio/mpeg" id="audio_wrong"></audio>
+<button id="btn_play_wrong" class="btn_on">違う、そうじゃない</button>
+
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+
+  const btn_play_wrong = document.getElementById("btn_play_wrong");
+  const audio_wrong = document.getElementById("audio_wrong");
+
+  btn_play_wrong.addEventListener("click", e => {
+    audio_wrong.play();
+  });
+
+});
+</script>
+
+<br><br>
+
+<!--==========-->
+
+<!--//////////-->
+<!--ループ非対応-->
+
+<p><font size=4>さよなら</font><br>
+帰りたいときに押してください。</p>
+<audio src="irori/tsugaru_sh.mp3" type="audio/mpeg" id="audio_tsugaru"></audio>
+<button id="btn_play_tsugaru" class="btn_on">さよなら貴方</button>
+
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+
+  const btn_play_tsugaru = document.getElementById("btn_play_tsugaru");
+  const audio_tsugaru = document.getElementById("audio_tsugaru");
+
+  btn_play_tsugaru.addEventListener("click", e => {
+    audio_tsugaru.play();
+  });
+});
+</script>
+
+<br><br>
+
+<!--==========-->
+
+<!--//////////-->
+<p><font size=4>ALL OFF</font><br>
+再生終了したいときに押してください。</p>
+<button id="btn_allstop" class="btn_off">ALL OFF</button><br>
+<script>
+  window.addEventListener('DOMContentLoaded', function(){
+    const btn_allstop = document.getElementById("btn_allstop");
+
+    btn_allstop.addEventListener("click", e => {
+    audio_out.pause();
+audio_out.currentTime = 0;
+    audio_wrong.pause();
+audio_wrong.currentTime = 0;
+audio_tsugaru.pause();
+audio_tsugaru.currentTime = 0;
+  });
+  });
+</script>
+<br>
+
+<style>
+.btn_on{
+    width: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background: #ff0000;
+    cursor: pointer;
+font-size: 20px;
+color: #fff;
+}
+.btn_off{
+    width: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background: #00f;
+    cursor: pointer;
+font-size: 20px;
+color: #fff;
+}
+
+</style>  
+
+<h2>借用物</h2>
+<a href="https://www.youtube.com/watch?v=WLnAlXH6E-c">ガキ使アウト音源</a><br>
+<a href="https://www.youtube.com/watch?v=PmEpx-Ywr2w">違う、そうじゃない</a><br>
+<a href="https://www.youtube.com/watch?v=xuMKgVJQZkQ">津軽海峡・冬景色</a>
+  <br><br>
+<a href="https://73-forsc.github.io/">この装置の製作者のページ</a>
+ <br><br>
+<p>
+2022/10/1 公開<br><br>
+製作・著作<br>
+i_2e4b71</p>
+</body>
+</html>
