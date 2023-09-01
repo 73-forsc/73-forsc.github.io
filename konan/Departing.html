@@ -1,0 +1,72 @@
+
+<HTML>
+
+<HEAD>
+<TITLE>コナン</TITLE>
+</HEAD>
+
+<!--
+音声追加時は//////////から====までを1単位としてコピー
+audioタグファイル参照,id
+buttonタグid,再生停止,class
+btn_play_x
+btn_stop_x
+btn_pause_x
+audioElementX
+audioElement id
+styleタグ内.btn_x
+-->
+
+<BODY>
+
+<h1>コナン</h1>
+<p>ONで再生、OFFで再生終了</p>
+
+<!--//////////-->
+<!--ループ非対応-->
+<audio src="konan.mp3" type="audio/mpeg" id="Melody_A"></audio>
+<button id="btn_play" class="btn_on"><font color="#fff">ON</font></button><br>
+<button id="btn_stop" class="btn_off"><font color="#fff">OFF</font></button><br><br>
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+
+  const btn_play = document.getElementById("btn_play");
+  const btn_stop = document.getElementById("btn_stop");
+
+  btn_play.addEventListener("click", e => {
+    Melody_A.play();
+  });
+
+  btn_stop.addEventListener("click", e => {
+    Melody_A.pause();
+    Melody_A.currentTime = 0;
+  });
+
+});
+</script>
+
+<style>
+.btn_on{
+    width: 80px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background: #b7282e;
+    cursor: pointer;
+font-size: 20px;
+}
+.btn_off{
+    width: 80px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background: #333631;
+    cursor: pointer;
+font-size: 20px;
+}
+
+</style>
+<br><br>
+<!--==========-->
+</body>
+</html>
